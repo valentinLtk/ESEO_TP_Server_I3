@@ -6,18 +6,17 @@ import com.dto.Ville;
 
 public interface VilleDAO {
 
-
 	/**
 	 * Returning all 'Ville' corresponding to the parameter
 	 * 
-	 * @param param
+	 * @param Code_postal
 	 */
-	public ArrayList<Ville> findVilleWithCodePostal(String Code_postal);
+	public ArrayList<Ville> getVilleByCodePostal(String Code_postal);
 	
 	/**
 	 * Returning all 'Ville' method
 	 */
-	public ArrayList<Ville> findVille();
+	public ArrayList<Ville> getVille();
 
 	/**
 	 * Adding a 'Ville' 

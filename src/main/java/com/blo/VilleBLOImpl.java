@@ -32,9 +32,9 @@ public class VilleBLOImpl implements VilleBLO {
 			Connection con = JDBCConfig.openConnection();
 						
 			if (Code_postal == null) {
-				villes = villeDAO.findVille();
+				villes = villeDAO.getVille();
 			} else {
-				villes = villeDAO.findVilleWithCodePostal(Code_postal);
+				villes = villeDAO.getVilleByCodePostal(Code_postal);
 			}
 			System.out.println(
 					"Nombre de villes : " + villes.size() + '\n');

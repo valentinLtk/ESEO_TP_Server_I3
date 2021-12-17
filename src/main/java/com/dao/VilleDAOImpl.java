@@ -19,10 +19,10 @@ public class VilleDAOImpl implements VilleDAO{
 	 * Returning all 'Ville' corresponding to 
 	 * the parameter 'Code_postal' entered
 	 * 
-	 * @param param
+	 * @param Code_postal
 	 */
 	@Override
-	public ArrayList<Ville> findVilleWithCodePostal(String Code_postal) {
+	public ArrayList<Ville> getVilleByCodePostal(String Code_postal) {
 		
 		// Connection parameters
 		Statement stm;
@@ -62,7 +62,7 @@ public class VilleDAOImpl implements VilleDAO{
 	 *
 	 */
 	@Override
-	public ArrayList<Ville> findVille() {
+	public ArrayList<Ville> getVille() {
 		// Connection parameters
 		Statement stm;
 		ResultSet rs;
@@ -78,7 +78,7 @@ public class VilleDAOImpl implements VilleDAO{
 			
 			while (rs.next()) {
 				Ville ville = new Ville();
-				ville.setNom_commune(rs.getString("Nom_Commune"));
+				ville.setNom_commune(rs.getString("Nom_commune"));
 
 				villes.add(ville);
 			}
