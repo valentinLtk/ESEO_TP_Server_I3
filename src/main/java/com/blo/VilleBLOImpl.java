@@ -46,7 +46,7 @@ public class VilleBLOImpl implements VilleBLO {
 						+ villes.get(i).getCode_postal());
 			}
 			
-			// closing connection
+			// Closing connection
 			con = JDBCConfig.closeConnection();
 			
 		} catch (SQLException e) {
@@ -66,7 +66,7 @@ public class VilleBLOImpl implements VilleBLO {
 	public Ville postVille(Ville ville) {
 		
 		try {
-			//opening connection
+			// Opening connection
 			Connection con = JDBCConfig.openConnection();
 			
 			villeDAO.addVille(ville);
@@ -76,7 +76,7 @@ public class VilleBLOImpl implements VilleBLO {
 					+ ville.getNom_commune() + " "
 					+ ville.getCode_postal());
 			
-			// closing connection
+			// Closing connection
 			con = JDBCConfig.closeConnection();
 			
 		} catch (SQLException e) {
